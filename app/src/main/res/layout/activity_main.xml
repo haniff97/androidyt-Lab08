@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android ATC Pizza Shop"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule a Pickup"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"/>
+
+    <!-- Full Name Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Full Name:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Enter Full Name"
+            android:inputType="textPersonName"
+            android:id="@+id/nameEditText"/>
+    </LinearLayout>
+
+    <!-- Phone Number Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Phone Number:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="Enter Phone Number"
+            android:inputType="phone"
+            android:id="@+id/phoneEditText"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp">
+
+        <!-- Pricing Info -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price: Small : $5, Medium: $8, Large: $11, Extra Large: $14"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"/>
+
+        <!-- Pizza Size Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Your Pizza Size:"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Pizza Size Slider and Label -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Slider -->
+            <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:max="3"
+                android:layout_marginEnd="16dp"
+                android:id="@+id/SeekBar"/>
+
+            <!-- Selected Size Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:id="@+id/sizeTextView"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Select Date and Time Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFFFFF"
+            android:id="@+id/dateBtn"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Time"
+            android:backgroundTint="#6200EE"
+            android:textColor="#FFFFFF"
+            android:id="@+id/timeBtn"/>
+    </LinearLayout>
+
+    <!-- Selected Date and Time Display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="26/5/2022"
+            android:textSize="16sp"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/dateTextView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9 : 14"
+            android:textSize="16sp"
+            android:id="@+id/timeTextView"/>
+    </LinearLayout>
+
+    <!-- Schedule Button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"
+        android:id="@+id/scheduleBtn"/>
+</LinearLayout>
